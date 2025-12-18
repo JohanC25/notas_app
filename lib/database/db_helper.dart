@@ -23,9 +23,11 @@ class DBHelper {
 
   static Future<List<Note>> getNotes() async {
     final db = await DBHelper.database();
-    final List<Map<String, dynamic>> maps = await db.query('notes', orderBy: 'isPinned DESC, updatedAt DESC');
+    final List<Map<String, dynamic>> maps = await db.query(
+        'notes',
+        orderBy: 'isPinned DESC, updatedAt DESC'
+    );
     return List.generate(maps.length, (i) => Note.fromMap(maps[i]));
   }
 
-  // Agrega aquí métodos para delete y update después...
 }
