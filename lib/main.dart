@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './viewmodels/note_provider.dart';
-//import './views/notes_list_screen.dart';
+import './views/notes_list_screen.dart';
 
 void main() {
   runApp(const MyApp());
